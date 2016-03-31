@@ -1,0 +1,53 @@
+#container{
+    position: relative;
+    overflow:hidden;
+    width:600px;
+    height:600px;
+    border: 2px solid grey;
+}
+.road-container{
+    white-space:nowrap;
+    margin-top: 500px;
+}
+.value{
+    position: absolute;
+    width: 100%;
+}
+.value-text{
+    text-align: center;
+}
+.road {
+    width:600px;
+    display:inline-block;
+    height: 28px;
+    background-image:url(images/road.png);
+    position: relative;
+
+}
+.bigCactus {
+    background-image:url(images/bigсaktus.png);
+}
+.cloud {
+    background-image:url(images/cloud.png);
+}
+.dino {
+    background-image:url(images/dino.png);
+    width: 100px;
+    height: 96px;
+    position: absolute;
+    top: 413px;
+}
+.gameover {
+    background-image:url(images/gameover.png);
+}
+.restart {
+    background-image:url(images/restart.png);
+}
+
+.smallCactus {
+    background-image:url(images/smallcactus.png);
+}
+.threecactuses {
+    background-image:url(images/threecactuses.png);
+}
+
