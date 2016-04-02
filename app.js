@@ -10,18 +10,39 @@ var counter = 0;
 $('.btn-begin').on('click', beginGame);
 
 
-function beginGame(){
+    function beginGame(){
+        stepsCounter();
+        moveRoad();
 
-    setInterval(function() {
-        counter += 1;                       //счетчик шагов
-        $('.value-text').text(counter);
+        $('.dino').on('click', function(){
+            $('.dino').animate({top:'-=200'}, 700).animate({top:'+=200'},700)           //прыжок Дино
+        });
+    }
 
-        $('.road').css('right', '+=100px'); //движение фона - добавить плавность смещения
+    function stepsCounter(){
+        setInterval(function() {
+            counter += 1;                       //счетчик шагов
+            $('.value-text').text(counter);
+        }, 1000);
+    }
 
-    }, 1000);
+
+    function moveRoad(){
+        setInterval(function() {
+            $('.road').animate({right:'+=100'},1000);                               //движение фона, убрать задержки между движениями
+            var shift = parseInt($('.road:first').css('right'));
+//            console.log(shift);
+            if (shift > 600){
+            $('.road:first').remove();                                                  //удаляет див в начале списка
+            $('<div class="road"></div>').insertAfter('.road:last');                   //добавляет див в конце списка
+
+            }
+        }, 1000);
+    };
 
 
-}
 
 
 });
+
+
