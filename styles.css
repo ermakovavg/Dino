@@ -24,9 +24,7 @@
     position: relative;
 
 }
-.bigCactus {
-    background-image:url(images/bigсaktus.png);
-}
+
 .cloud {
     background-image:url(images/cloud.png);
 }
@@ -46,8 +44,19 @@
 
 .smallCactus {
     background-image:url(images/smallcactus.png);
+
+
 }
 .threecactuses {
     background-image:url(images/threecactuses.png);
 }
 
+.bigCactus {
+    background-image:url(images/bigсactus.png);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    top: 413px;
+    position: absolute;
+
+}
